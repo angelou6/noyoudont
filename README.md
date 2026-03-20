@@ -1,6 +1,6 @@
 # No you don't!
 
-## Como replicar
+## How to replicate
 
 ```
 npm i

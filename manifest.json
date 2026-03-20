@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "No You Dont",
-  "version": "0.1.1",
-  "description": "Extensión que te impide visitar sitios web.",
+  "version": "0.1.3",
+  "description": "Extension that prevents you from visiting websites.",
   "browser_specific_settings": {
     "gecko": {
       "id": "@noyoudont",
