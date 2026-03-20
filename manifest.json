@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "No You Dont",
   "version": "1.0",
-  "description": "Extension that prevents you from visiting websites",
+  "description": "Extensión que te impide visitar sitios web.",
   "permissions": ["tabs", "storage"],
   "background": {
     "scripts": ["dist/background/background.js"]
