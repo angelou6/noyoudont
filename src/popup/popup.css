@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f0f0f;
+  --surface: #1a1a1a;
+  --border: #2a2a2a;
+  --accent: #ff4444;
+  --accent-dim: #ff444422;
+  --text: #f0f0f0;
+  --muted: #666;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "DM Mono", monospace;
+  width: 300px;
+  min-height: 200px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+b {
+  display: block;
+  font-family: "Syne", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  color: var(--text);
+  position: relative;
+  padding-left: 12px;
+}
+
+b::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.websites {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.websites:empty::after {
+  content: "no blocked sites yet";
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+  display: block;
+  padding: 12px 0;
+}
+
+.website-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 11px;
+  color: var(--text);
+  animation: slideIn 0.15s ease;
+  gap: 8px;
+}
+
+.website-holder:hover {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.website-holder button {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 11px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  transition:
+    color 0.1s,
+    background 0.1s;
+}
+
+.website-holder button:hover {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+form {
+  display: flex;
+  gap: 6px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+input[type="url"] {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: var(--text);
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input[type="url"]::placeholder {
+  color: var(--muted);
+}
+
+input[type="url"]:focus {
+  border-color: var(--accent);
+}
+
+form button {
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-family: "Syne", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+}
+
+form button:hover {
+  opacity: 0.85;
+}
+
+.add-this {
+  width: 100%;
+  margin-top: 8px;
+  padding: 9px;
+  background: transparent;
+  border: 1px dashed var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.add-this:hover {
+  background: var(--accent);
+  color: #fff;
+}
