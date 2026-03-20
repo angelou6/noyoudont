@@ -17,7 +17,7 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "DM Mono", monospace;
+  font-family: monospace;
   width: 300px;
   min-height: 200px;
   padding: 20px;
@@ -26,7 +26,7 @@ body {
 
 b {
   display: block;
-  font-family: "Syne", sans-serif;
+  font-family: sans-serif;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -131,7 +131,7 @@ input[type="url"] {
   border-radius: 6px;
   padding: 8px 10px;
   color: var(--text);
-  font-family: "DM Mono", monospace;
+  font-family: monospace;
   font-size: 11px;
   outline: none;
   transition: border-color 0.15s;
@@ -150,7 +150,7 @@ form button {
   border: none;
   border-radius: 6px;
   color: #fff;
-  font-family: "Syne", sans-serif;
+  font-family: sans-serif;
   font-size: 12px;
   font-weight: 700;
   padding: 8px 14px;
@@ -171,7 +171,7 @@ form button:hover {
   border: 1px dashed var(--accent);
   border-radius: 6px;
   color: var(--accent);
-  font-family: "DM Mono", monospace;
+  font-family: monospace;
   font-size: 11px;
   cursor: pointer;
   transition:
