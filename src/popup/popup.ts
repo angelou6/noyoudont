@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       currentWindow: true,
     });
     if (tab.url) addWebsite(tab.url);
-    if (tab.id) browser.tabs.remove(tab.id);
+    if (tab.id) browser.tabs.reload(tab.id);
   });
 
   browser.storage.local.get(["urls"]).then((res) => {
