@@ -8,6 +8,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/firefox-webext-browser": "^143.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "web-ext": "^10.0.0"
   }
 }
